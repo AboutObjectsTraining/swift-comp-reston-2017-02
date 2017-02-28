@@ -1,5 +1,7 @@
 import XCTest
 
+@testable import SwiftProgramming
+
 private let myRect = Rectangle(
     origin: Point(x: 5.0, y: 5.0),
     size: Size(width: 40.0, height: 20.0))
@@ -8,6 +10,16 @@ class Lab2Tests: XCTestCase
 {
     override func setUp()    { super.setUp(); print("") }
     override func tearDown() { print(""); super.tearDown() }
+    
+    func testMe()
+    {
+        let rect1 = Rectangle(origin: myRect.origin, size: myRect.size)
+        
+        let center = rect1.center
+        let area = rect1.area
+        
+        print("center is \(center), area is \(area)")
+    }
 
     func testArea()
     {

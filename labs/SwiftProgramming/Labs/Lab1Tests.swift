@@ -14,15 +14,6 @@ func convertedToCelsius(fahrenheit: Double) -> Double
 
 class Lab1Tests: XCTestCase
 {
-    func testIntMax()
-    {
-        print(Int8.max)
-        print(UInt8.max)
-        print(Int16.max)
-        print(Int32.max)
-        print(Int64.max)
-    }
-    
     func testConvertFahrenheitToCelsiusUsingForLoop()
     {
         for value in fahrenheitValues {
