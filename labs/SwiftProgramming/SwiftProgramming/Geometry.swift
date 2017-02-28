@@ -1,3 +1,4 @@
+
 struct Point: CustomDebugStringConvertible {
     var x: Double
     var y: Double

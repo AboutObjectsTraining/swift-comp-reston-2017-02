@@ -34,7 +34,7 @@ protocol Friendable
 }
 
 // MARK: - Person Class
-class Person: Likeable, Friendable, CustomDebugStringConvertible
+class Person: CustomDebugStringConvertible
 {
     // MARK: Person Properties
     var firstName: String
@@ -57,16 +57,11 @@ class Person: Likeable, Friendable, CustomDebugStringConvertible
         self.firstName = firstName
         self.lastName = lastName
     }
-    
-    convenience init(_ firstName: String, _ lastName: String, _ friendID: Int) {
-        self.init(firstName: firstName, lastName: lastName)
-        self.friendID = friendID
-    }
 }
 
 
 // MARK: - Person's Likeable Methods
-extension Person
+extension Person: Likeable
 {
     func like() {
         numberOfLikes += 1
@@ -80,7 +75,7 @@ extension Person
 }
 
 // MARK: - Person's Friendable Methods
-extension Person
+extension Person: Friendable
 {
     func friend(_ newFriend: Friendable) {
         friends.append(newFriend)

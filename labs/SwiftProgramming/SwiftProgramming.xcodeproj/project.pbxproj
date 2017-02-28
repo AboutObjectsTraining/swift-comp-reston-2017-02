@@ -21,7 +21,6 @@
 		ABA5E2F31B7A637800DD2A7A /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA5E2F21B7A637800DD2A7A /* Contact.swift */; };
 		ABA5E2F41B7A64BC00DD2A7A /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA5E2F21B7A637800DD2A7A /* Contact.swift */; };
 		ABEC74331B792D380088A91B /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEC74321B792D380088A91B /* Geometry.swift */; };
-		ABEC74341B792D3E0088A91B /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEC74321B792D380088A91B /* Geometry.swift */; };
 		ABFDA28D1E53688200A4ADD6 /* TupleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFDA28C1E53688200A4ADD6 /* TupleTests.swift */; };
 		ABFDA28F1E53688200A4ADD6 /* SwiftProgramming.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB9C5FFB1B4D85D4006860E0 /* SwiftProgramming.framework */; };
 		ABFDA2981E536AA500A4ADD6 /* StructAccessorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFDA2971E536AA500A4ADD6 /* StructAccessorTests.swift */; };
@@ -314,7 +313,6 @@
 				ABA5E2F41B7A64BC00DD2A7A /* Contact.swift in Sources */,
 				AB1025391B4F1F0F00387003 /* Dog.swift in Sources */,
 				AB1025361B4F1A7300387003 /* Employee.swift in Sources */,
-				ABEC74341B792D3E0088A91B /* Geometry.swift in Sources */,
 				AB10253D1B4F323E00387003 /* Lab3Tests.swift in Sources */,
 				ABA5E2F11B7A633E00DD2A7A /* Lab4Tests.swift in Sources */,
 				AB9C603A1B4D8827006860E0 /* Lab1Tests.swift in Sources */,
