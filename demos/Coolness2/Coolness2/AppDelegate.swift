@@ -8,7 +8,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
     func applicationDidFinishLaunching(_ application: UIApplication) {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = UIColor.yellow
-        window?.rootViewController = CoolViewController()
+        window?.rootViewController = CoolViewController(nibName: "CoolStuff", bundle: nil)
         
         window?.makeKeyAndVisible()
     }
