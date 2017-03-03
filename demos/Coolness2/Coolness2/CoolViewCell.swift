@@ -5,7 +5,7 @@ private let xPadding: CGFloat = 10
 private let yPadding: CGFloat = 5
 private let textOrigin = CGPoint(x: xPadding, y: yPadding)
 
-
+@IBDesignable
 class CoolViewCell: UIView
 {
     class var defaultAttributes: [String: Any] {
@@ -13,7 +13,12 @@ class CoolViewCell: UIView
                 NSForegroundColorAttributeName: UIColor.white]
     }
     
-    var text: String? {
+    @IBInspectable var borderColor: UIColor? {
+        get { return UIColor(cgColor: layer.borderColor ?? UIColor.white.cgColor) }
+        set { layer.borderColor = newValue?.cgColor }
+    }
+    
+    @IBInspectable var text: String? {
         didSet {
             sizeToFit()
         }
@@ -32,6 +37,11 @@ class CoolViewCell: UIView
         layer.masksToBounds = true
     }
     
+    override func prepareForInterfaceBuilder() {
+        layer.masksToBounds = true
+        sizeToFit()
+    }
+    
     func configureGestureRecognizers() {
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(bounce(recognizer:)))
         addGestureRecognizer(tapRecognizer)
@@ -46,7 +56,9 @@ class CoolViewCell: UIView
     }
     
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
+        configureLayer()
+        configureGestureRecognizers()
     }
     
     func pan(recognizer: UIPanGestureRecognizer) {
