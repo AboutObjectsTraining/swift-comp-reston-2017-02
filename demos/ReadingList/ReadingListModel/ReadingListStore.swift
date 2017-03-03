@@ -29,10 +29,14 @@ open class ReadingListStore : NSObject
     let storeName: String
     let documentURL: URL
     
-    public init(_ storeName: String)
+    override convenience init() {
+        self.init(storeName: nil)
+    }
+    
+    public init(storeName: String? = "BooksAndAuthors")
     {
-        self.storeName = storeName
-        documentURL = fileURLForDocument(storeName, type: storeType)
+        self.storeName = storeName ?? ""
+        documentURL = fileURLForDocument(self.storeName, type: storeType)
         super.init()
     }
     

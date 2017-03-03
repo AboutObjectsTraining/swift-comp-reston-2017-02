@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F09DB881E69FE8A00E03975 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F09DB871E69FE8A00E03975 /* Extensions.swift */; };
+		3F09DB8A1E6A04FC00E03975 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F09DB891E6A04FC00E03975 /* RoundedImageView.swift */; };
 		3F1D286B1E67792A00A6D68B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1D286A1E67792A00A6D68B /* AppDelegate.swift */; };
 		3F1D28701E67792A00A6D68B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F1D286E1E67792A00A6D68B /* Main.storyboard */; };
 		3F1D28721E67792A00A6D68B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F1D28711E67792A00A6D68B /* Assets.xcassets */; };
@@ -41,6 +43,7 @@
 		3F1D28C31E68B58F00A6D68B /* ReadingListStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1D28AC1E68B58F00A6D68B /* ReadingListStore.swift */; };
 		3F59D9B71E68CFB800959678 /* EditBookController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F59D9B61E68CFB800959678 /* EditBookController.swift */; };
 		3F59D9B91E68DA1500959678 /* AddBookController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F59D9B81E68DA1500959678 /* AddBookController.swift */; };
+		3FFEA2761E6A0C5600DA9D48 /* ReadingListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFEA2751E6A0C5600DA9D48 /* ReadingListDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F09DB871E69FE8A00E03975 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		3F09DB891E6A04FC00E03975 /* RoundedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 		3F1D28671E67792900A6D68B /* ReadingList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReadingList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F1D286A1E67792A00A6D68B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F1D286F1E67792A00A6D68B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -93,6 +98,7 @@
 		3F1D28AC1E68B58F00A6D68B /* ReadingListStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadingListStore.swift; sourceTree = "<group>"; };
 		3F59D9B61E68CFB800959678 /* EditBookController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditBookController.swift; sourceTree = "<group>"; };
 		3F59D9B81E68DA1500959678 /* AddBookController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBookController.swift; sourceTree = "<group>"; };
+		3FFEA2751E6A0C5600DA9D48 /* ReadingListDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadingListDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,10 +142,13 @@
 			isa = PBXGroup;
 			children = (
 				3F1D286A1E67792A00A6D68B /* AppDelegate.swift */,
+				3F09DB871E69FE8A00E03975 /* Extensions.swift */,
 				3F1D288A1E6885B100A6D68B /* ReadingListController.swift */,
+				3FFEA2751E6A0C5600DA9D48 /* ReadingListDataSource.swift */,
 				3F1D288C1E688ADB00A6D68B /* ViewBookController.swift */,
 				3F59D9B61E68CFB800959678 /* EditBookController.swift */,
 				3F59D9B81E68DA1500959678 /* AddBookController.swift */,
+				3F09DB891E6A04FC00E03975 /* RoundedImageView.swift */,
 				3F1D286E1E67792A00A6D68B /* Main.storyboard */,
 				3F1D28911E68929400A6D68B /* EditBook.storyboard */,
 				3F1D288E1E68921700A6D68B /* AddBook.storyboard */,
@@ -325,11 +334,14 @@
 				3F1D288B1E6885B100A6D68B /* ReadingListController.swift in Sources */,
 				3F1D28AD1E68B58F00A6D68B /* Author.swift in Sources */,
 				3F1D28AE1E68B58F00A6D68B /* Book.swift in Sources */,
+				3FFEA2761E6A0C5600DA9D48 /* ReadingListDataSource.swift in Sources */,
 				3F59D9B91E68DA1500959678 /* AddBookController.swift in Sources */,
 				3F1D28C31E68B58F00A6D68B /* ReadingListStore.swift in Sources */,
 				3F1D28C11E68B58F00A6D68B /* ModelObject.swift in Sources */,
 				3F1D28C21E68B58F00A6D68B /* ReadingList.swift in Sources */,
+				3F09DB8A1E6A04FC00E03975 /* RoundedImageView.swift in Sources */,
 				3F59D9B71E68CFB800959678 /* EditBookController.swift in Sources */,
+				3F09DB881E69FE8A00E03975 /* Extensions.swift in Sources */,
 				3F1D286B1E67792A00A6D68B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

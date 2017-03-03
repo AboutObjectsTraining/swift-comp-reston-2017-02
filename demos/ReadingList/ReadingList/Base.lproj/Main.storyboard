@@ -64,7 +64,7 @@
                         </prototypes>
                         <sections/>
                         <connections>
-                            <outlet property="dataSource" destination="to6-TQ-lbn" id="Uro-Jq-Jgd"/>
+                            <outlet property="dataSource" destination="BTz-VE-A2N" id="poJ-3K-Toe"/>
                             <outlet property="delegate" destination="to6-TQ-lbn" id="lQx-rj-GaH"/>
                         </connections>
                     </tableView>
@@ -75,8 +75,18 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="dataSource" destination="BTz-VE-A2N" id="kPL-GW-xGQ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FI4-KI-Qoz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="qEo-NI-cyI" customClass="ReadingListStore" customModule="ReadingList" customModuleProvider="target"/>
+                <customObject id="BTz-VE-A2N" customClass="ReadingListDataSource" customModule="ReadingList" customModuleProvider="target">
+                    <connections>
+                        <outlet property="store" destination="qEo-NI-cyI" id="irO-Lq-4UT"/>
+                        <outlet property="tableView" destination="XT4-72-89d" id="7tG-Zq-5Ob"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="276" y="63"/>
         </scene>
@@ -97,4 +107,5 @@
             <point key="canvasLocation" x="932" y="201"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

@@ -12,21 +12,21 @@ open class Author: ModelObject
     open var firstName: String?
     open var lastName: String?
     
-    open var fullName: String {
-        switch (firstName, lastName) {
-        case (let firstName?, let lastName?): return "\(lastName), \(firstName)"
-        case (let firstName?, _):         return firstName
-        case (_, let lastName?):          return lastName
-        default:                          return "Unknown"
-        }
-    }
-    
 //    open var fullName: String {
-//        guard let firstName = firstName, let lastName = lastName else {
-//            return ""
+//        switch (firstName, lastName) {
+//        case let (first?, last?): return "\(last), \(first)"
+//        case let (first?, _):     return first
+//        case let (_, last?):      return last
+//        default:                  return "Unknown"
 //        }
-//        return (firstName + " " + lastName).trimmingCharacters(in: CharacterSet.whitespaces)
 //    }
+    
+    open var fullName: String {
+        guard let firstName = firstName, let lastName = lastName else {
+            return ""
+        }
+        return (firstName + " " + lastName).trimmingCharacters(in: CharacterSet.whitespaces)
+    }
     
     open override var description: String {
         return fullName
