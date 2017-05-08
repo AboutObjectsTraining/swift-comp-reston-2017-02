@@ -19,13 +19,22 @@ class Person: Serializable, CustomStringConvertible, CustomDebugStringConvertibl
         return people
     }
     
-    var fullName: String { get {
-        if firstName != nil && lastName != nil { return "\(firstName) \(lastName)" }
-        if firstName != nil { return firstName! }
-        if lastName  != nil { return lastName! }
-        return "Unknown"
+    var fullName: String {
+        switch (firstName, lastName) {
+        case (nil, nil): return "Unknown"
+        case let (first?, _): return first
+        case let (_, last?): return last
+        default: return "\(lastName), \(firstName)"
         }
     }
+
+//    var fullName: String { get {
+//        if firstName != nil && lastName != nil { return "\(firstName) \(lastName)" }
+//        if firstName != nil { return firstName! }
+//        if lastName  != nil { return lastName! }
+//        return "Unknown"
+//        }
+//    }
     
     var description: String {
         return fullName + ", age: \(age == nil ? "unknown" : age!.description)"

@@ -5,15 +5,19 @@ private let xPadding: CGFloat = 10
 private let yPadding: CGFloat = 5
 private let textOrigin = CGPoint(x: xPadding, y: yPadding)
 
-
+@IBDesignable
 class CoolViewCell: UIView
 {
-    class var defaultAttributes: [String: Any] {
-        return [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 18),
+    var defaultAttributes: [String: Any] {
+        return [NSFontAttributeName: UIFont.boldSystemFont(ofSize: fontSize ?? 18),
                 NSForegroundColorAttributeName: UIColor.white]
     }
     
-    var text: String? {
+    @IBInspectable var fontSize: CGFloat? {
+        didSet { sizeToFit() }
+    }
+    
+    @IBInspectable var text: String? {
         didSet {
             sizeToFit()
         }
@@ -46,7 +50,14 @@ class CoolViewCell: UIView
     }
     
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
+        configureLayer()
+        configureGestureRecognizers()
+    }
+    
+    override func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+        layer.masksToBounds = true
     }
     
     func pan(recognizer: UIPanGestureRecognizer) {
@@ -94,7 +105,7 @@ extension CoolViewCell
 {
     override func sizeThatFits(_ size: CGSize) -> CGSize {
         guard let text = text else { return size }
-        var newSize = (text as NSString).size(attributes: type(of:self).defaultAttributes)
+        var newSize = (text as NSString).size(attributes: defaultAttributes)
         newSize.width += 2 * xPadding
         newSize.height += 2 * yPadding
         return newSize
@@ -102,7 +113,7 @@ extension CoolViewCell
     
     override func draw(_ rect: CGRect) {
         guard let text = text else { return }
-        (text as NSString).draw(at: textOrigin, withAttributes: type(of:self).defaultAttributes)
+        (text as NSString).draw(at: textOrigin, withAttributes: defaultAttributes)
     }
 }
 

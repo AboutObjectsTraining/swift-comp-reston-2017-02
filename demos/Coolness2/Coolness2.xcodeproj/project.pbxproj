@@ -14,6 +14,7 @@
 		3FA2C9BF1E6722D8006F41FA /* CoolViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA2C9BB1E6722D8006F41FA /* CoolViewCell.swift */; };
 		3FA2C9C01E6722D8006F41FA /* CoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA2C9BC1E6722D8006F41FA /* CoolViewController.swift */; };
 		3FA2C9C21E672597006F41FA /* CoolStuff.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FA2C9C11E672597006F41FA /* CoolStuff.xib */; };
+		B413924F1E6764B4003F68BC /* Cells.xib in Resources */ = {isa = PBXBuildFile; fileRef = B413924E1E6764B4003F68BC /* Cells.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		3FA2C9BB1E6722D8006F41FA /* CoolViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoolViewCell.swift; sourceTree = "<group>"; };
 		3FA2C9BC1E6722D8006F41FA /* CoolViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoolViewController.swift; sourceTree = "<group>"; };
 		3FA2C9C11E672597006F41FA /* CoolStuff.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoolStuff.xib; sourceTree = "<group>"; };
+		B413924E1E6764B4003F68BC /* Cells.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cells.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				3FA2C9BB1E6722D8006F41FA /* CoolViewCell.swift */,
 				3FA2C9BC1E6722D8006F41FA /* CoolViewController.swift */,
 				3FA2C9C11E672597006F41FA /* CoolStuff.xib */,
+				B413924E1E6764B4003F68BC /* Cells.xib */,
 				3FA2C9AE1E672228006F41FA /* Assets.xcassets */,
 				3FA2C9B01E672228006F41FA /* LaunchScreen.storyboard */,
 				3FA2C9B31E672228006F41FA /* Info.plist */,
@@ -131,6 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FA2C9B21E672228006F41FA /* LaunchScreen.storyboard in Resources */,
+				B413924F1E6764B4003F68BC /* Cells.xib in Resources */,
 				3FA2C9C21E672597006F41FA /* CoolStuff.xib in Resources */,
 				3FA2C9AF1E672228006F41FA /* Assets.xcassets in Resources */,
 			);

@@ -18,15 +18,15 @@ class ClosureTests: XCTestCase
         print(""); super.tearDown()
     }
     
-    func testClosure()
-    {
-        let wavyLine = String(repeating: String(describing: WavyDash), count: 7)
-        let barriers = String(repeating: String(Construction), count: 11)
-        
-        showDate {
-            print("\(wavyLine)" + " MESSAGE " + "\(wavyLine)" + Mac + barriers + Mac)
-        }
-    }
+//    func testClosure()
+//    {
+//        let wavyLine = String(repeating: String(describing: WavyDash), count: 7)
+//        let barriers = String(repeating: String(Construction), count: 11)
+//        
+//        showDate {
+//            print("\(wavyLine)" + " MESSAGE " + "\(wavyLine)" + Mac + barriers + Mac)
+//        }
+//    }
 }
 
 
