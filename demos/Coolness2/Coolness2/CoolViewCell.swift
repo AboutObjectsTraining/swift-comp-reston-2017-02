@@ -8,13 +8,14 @@ private let textOrigin = CGPoint(x: xPadding, y: yPadding)
 @IBDesignable
 class CoolViewCell: UIView
 {
-    var defaultAttributes: [String: Any] {
-        return [NSFontAttributeName: UIFont.boldSystemFont(ofSize: fontSize ?? 18),
+    class var defaultAttributes: [String: Any] {
+        return [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 18),
                 NSForegroundColorAttributeName: UIColor.white]
     }
     
-    @IBInspectable var fontSize: CGFloat? {
-        didSet { sizeToFit() }
+    @IBInspectable var borderColor: UIColor? {
+        get { return UIColor(cgColor: layer.borderColor ?? UIColor.white.cgColor) }
+        set { layer.borderColor = newValue?.cgColor }
     }
     
     @IBInspectable var text: String? {
@@ -36,6 +37,11 @@ class CoolViewCell: UIView
         layer.masksToBounds = true
     }
     
+    override func prepareForInterfaceBuilder() {
+        layer.masksToBounds = true
+        sizeToFit()
+    }
+    
     func configureGestureRecognizers() {
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(bounce(recognizer:)))
         addGestureRecognizer(tapRecognizer)
@@ -53,11 +59,6 @@ class CoolViewCell: UIView
         super.init(coder: aDecoder)
         configureLayer()
         configureGestureRecognizers()
-    }
-    
-    override func prepareForInterfaceBuilder() {
-        super.prepareForInterfaceBuilder()
-        layer.masksToBounds = true
     }
     
     func pan(recognizer: UIPanGestureRecognizer) {
@@ -105,7 +106,7 @@ extension CoolViewCell
 {
     override func sizeThatFits(_ size: CGSize) -> CGSize {
         guard let text = text else { return size }
-        var newSize = (text as NSString).size(attributes: defaultAttributes)
+        var newSize = (text as NSString).size(attributes: type(of:self).defaultAttributes)
         newSize.width += 2 * xPadding
         newSize.height += 2 * yPadding
         return newSize
@@ -113,7 +114,7 @@ extension CoolViewCell
     
     override func draw(_ rect: CGRect) {
         guard let text = text else { return }
-        (text as NSString).draw(at: textOrigin, withAttributes: defaultAttributes)
+        (text as NSString).draw(at: textOrigin, withAttributes: type(of:self).defaultAttributes)
     }
 }
 
